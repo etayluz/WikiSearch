@@ -11,6 +11,7 @@
 @interface WikiViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
-@property NSDictionary *searchResults;
-@property (strong, atomic) UITableView *resultsTable;
+@property (weak, nonatomic) IBOutlet UITableView *resultsTable;
+@property (strong, nonatomic) NSDictionary *searchResults;
+
 @end

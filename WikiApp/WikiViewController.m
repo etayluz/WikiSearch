@@ -7,6 +7,7 @@
 //
 
 #import "WikiViewController.h"
+#import "WikiTableViewCell.h"
 
 @interface WikiViewController ()
 
@@ -16,9 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.resultsTable = [[UITableView alloc] init];
-    self.resultsTable.dataSource = self;
-    self.resultsTable.delegate = self;
+//    self.resultsTable = [[UITableView alloc] init];
+//    self.resultsTable.dataSource = self;
+//    self.resultsTable.delegate = self;
 
 }
 
@@ -55,29 +56,23 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//  ItemSet *is = [itemsArray objectAtIndex:indexPath.row];
-//  
-//  int height;
-//  if (is.textAreaString && [[POSCoreDataManager getInstance] getShowUPC] && is.item.add_item_searchfield)
-//    height = 60;
-//  else
-//    height = 44;
-//  
-//  if (is.promotionName != nil && is.textAreaString.length > 0)
-//    height = 60;
-//  
-//  return height;
   return 50;
-  
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  SaleTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"SaleTableCell" owner:self options:nil] objectAtIndex:0];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  static NSString *CellIdentifier = @"WikiTableViewCell";
+  WikiTableViewCell *cell = (WikiTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
-
+  if(cell == nil){
+    cell = [[[NSBundle mainBundle] loadNibNamed:@"WikiTableViewCell" owner:self options:nil] objectAtIndex:0];
+  }
+  cell.pageTitle.text = [@(indexPath.row) stringValue];
   
   return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  ;
 }
 
 

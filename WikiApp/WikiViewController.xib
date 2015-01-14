@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WikiViewController">
             <connections>
+                <outlet property="resultsTable" destination="WzM-RB-qGc" id="UEv-mk-CeZ"/>
                 <outlet property="searchButton" destination="RYU-Ci-gHn" id="mX1-ch-0MJ"/>
                 <outlet property="searchField" destination="V8G-VK-DbP" id="48T-yA-MMA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -34,6 +35,14 @@
                         <action selector="searchButtonPressed" destination="-1" eventType="touchUpInside" id="oGL-FI-zHC"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WzM-RB-qGc">
+                    <rect key="frame" x="0.0" y="146" width="499" height="249"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="r7F-qi-Zub"/>
+                        <outlet property="delegate" destination="-1" id="7K6-bz-oxU"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -41,7 +50,11 @@
                 <constraint firstItem="V8G-VK-DbP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="DhP-8C-hUW"/>
                 <constraint firstItem="RYU-Ci-gHn" firstAttribute="top" secondItem="V8G-VK-DbP" secondAttribute="bottom" constant="30" id="POz-5Q-gs6"/>
                 <constraint firstItem="RYU-Ci-gHn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QMu-UZ-J7G"/>
+                <constraint firstAttribute="bottom" secondItem="WzM-RB-qGc" secondAttribute="bottom" constant="26" id="TvY-us-0aJ"/>
+                <constraint firstItem="WzM-RB-qGc" firstAttribute="top" secondItem="RYU-Ci-gHn" secondAttribute="bottom" constant="20" id="oFq-Px-BBP"/>
+                <constraint firstAttribute="trailing" secondItem="WzM-RB-qGc" secondAttribute="trailing" id="sFg-AC-n8c"/>
                 <constraint firstItem="V8G-VK-DbP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="tfb-RD-Kk8"/>
+                <constraint firstItem="WzM-RB-qGc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uK2-9r-b4g"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="475.5" y="388.5"/>

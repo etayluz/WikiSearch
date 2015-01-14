@@ -16,6 +16,8 @@
 		B40008E11A647E3D00E48935 /* WikiAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B40008E01A647E3D00E48935 /* WikiAppTests.m */; };
 		B40008ED1A647F0900E48935 /* WikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40008EB1A647F0900E48935 /* WikiViewController.m */; };
 		B40008EE1A647F0900E48935 /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B40008EC1A647F0900E48935 /* WikiViewController.xib */; };
+		B45B15B21A660E4B008137CF /* WikiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B15B01A660E4B008137CF /* WikiTableViewCell.m */; };
+		B45B15B31A660E4B008137CF /* WikiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B15B11A660E4B008137CF /* WikiTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		B40008EA1A647F0900E48935 /* WikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiViewController.h; sourceTree = "<group>"; };
 		B40008EB1A647F0900E48935 /* WikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiViewController.m; sourceTree = "<group>"; };
 		B40008EC1A647F0900E48935 /* WikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
+		B45B15AF1A660E4B008137CF /* WikiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiTableViewCell.h; sourceTree = "<group>"; };
+		B45B15B01A660E4B008137CF /* WikiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiTableViewCell.m; sourceTree = "<group>"; };
+		B45B15B11A660E4B008137CF /* WikiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WikiTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,9 @@
 				B40008EA1A647F0900E48935 /* WikiViewController.h */,
 				B40008EB1A647F0900E48935 /* WikiViewController.m */,
 				B40008EC1A647F0900E48935 /* WikiViewController.xib */,
+				B45B15AF1A660E4B008137CF /* WikiTableViewCell.h */,
+				B45B15B01A660E4B008137CF /* WikiTableViewCell.m */,
+				B45B15B11A660E4B008137CF /* WikiTableViewCell.xib */,
 				B40008CE1A647E3D00E48935 /* Main.storyboard */,
 				B40008D11A647E3D00E48935 /* Images.xcassets */,
 				B40008D31A647E3D00E48935 /* LaunchScreen.xib */,
@@ -207,6 +215,7 @@
 			files = (
 				B40008D01A647E3D00E48935 /* Main.storyboard in Resources */,
 				B40008D51A647E3D00E48935 /* LaunchScreen.xib in Resources */,
+				B45B15B31A660E4B008137CF /* WikiTableViewCell.xib in Resources */,
 				B40008EE1A647F0900E48935 /* WikiViewController.xib in Resources */,
 				B40008D21A647E3D00E48935 /* Images.xcassets in Resources */,
 			);
@@ -227,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B40008C71A647E3D00E48935 /* AppDelegate.m in Sources */,
+				B45B15B21A660E4B008137CF /* WikiTableViewCell.m in Sources */,
 				B40008CA1A647E3D00E48935 /* WikiApp.xcdatamodeld in Sources */,
 				B40008ED1A647F0900E48935 /* WikiViewController.m in Sources */,
 				B40008C41A647E3D00E48935 /* main.m in Sources */,
@@ -422,6 +432,7 @@
 				B40008E61A647E3D00E48935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B40008E71A647E3D00E48935 /* Build configuration list for PBXNativeTarget "WikiAppTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +441,7 @@
 				B40008E91A647E3D00E48935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
