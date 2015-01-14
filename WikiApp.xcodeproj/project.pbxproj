@@ -18,6 +18,9 @@
 		B40008EE1A647F0900E48935 /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B40008EC1A647F0900E48935 /* WikiViewController.xib */; };
 		B45B15B21A660E4B008137CF /* WikiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B15B01A660E4B008137CF /* WikiTableViewCell.m */; };
 		B45B15B31A660E4B008137CF /* WikiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B15B11A660E4B008137CF /* WikiTableViewCell.xib */; };
+		B4AAA3DF1A66190800D80310 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA3DD1A66190800D80310 /* BrowserViewController.m */; };
+		B4AAA3E01A66190800D80310 /* BrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AAA3DE1A66190800D80310 /* BrowserViewController.xib */; };
+		B4AAA3E31A661A1200D80310 /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AAA3E21A661A1200D80310 /* Header.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,10 @@
 		B45B15AF1A660E4B008137CF /* WikiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiTableViewCell.h; sourceTree = "<group>"; };
 		B45B15B01A660E4B008137CF /* WikiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiTableViewCell.m; sourceTree = "<group>"; };
 		B45B15B11A660E4B008137CF /* WikiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WikiTableViewCell.xib; sourceTree = "<group>"; };
+		B4AAA3DC1A66190800D80310 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		B4AAA3DD1A66190800D80310 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		B4AAA3DE1A66190800D80310 /* BrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowserViewController.xib; sourceTree = "<group>"; };
+		B4AAA3E21A661A1200D80310 /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Header.png; path = Assets/Header.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +99,9 @@
 			children = (
 				B40008C51A647E3D00E48935 /* AppDelegate.h */,
 				B40008C61A647E3D00E48935 /* AppDelegate.m */,
+				B4AAA3DC1A66190800D80310 /* BrowserViewController.h */,
+				B4AAA3DD1A66190800D80310 /* BrowserViewController.m */,
+				B4AAA3DE1A66190800D80310 /* BrowserViewController.xib */,
 				B40008EA1A647F0900E48935 /* WikiViewController.h */,
 				B40008EB1A647F0900E48935 /* WikiViewController.m */,
 				B40008EC1A647F0900E48935 /* WikiViewController.xib */,
@@ -102,6 +112,7 @@
 				B40008D11A647E3D00E48935 /* Images.xcassets */,
 				B40008D31A647E3D00E48935 /* LaunchScreen.xib */,
 				B40008C81A647E3D00E48935 /* WikiApp.xcdatamodeld */,
+				B4AAA3E11A661A0600D80310 /* Images */,
 				B40008C11A647E3D00E48935 /* Supporting Files */,
 			);
 			path = WikiApp;
@@ -131,6 +142,14 @@
 				B40008DF1A647E3D00E48935 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4AAA3E11A661A0600D80310 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B4AAA3E21A661A1200D80310 /* Header.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +235,9 @@
 				B40008D01A647E3D00E48935 /* Main.storyboard in Resources */,
 				B40008D51A647E3D00E48935 /* LaunchScreen.xib in Resources */,
 				B45B15B31A660E4B008137CF /* WikiTableViewCell.xib in Resources */,
+				B4AAA3E01A66190800D80310 /* BrowserViewController.xib in Resources */,
 				B40008EE1A647F0900E48935 /* WikiViewController.xib in Resources */,
+				B4AAA3E31A661A1200D80310 /* Header.png in Resources */,
 				B40008D21A647E3D00E48935 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +261,7 @@
 				B40008CA1A647E3D00E48935 /* WikiApp.xcdatamodeld in Sources */,
 				B40008ED1A647F0900E48935 /* WikiViewController.m in Sources */,
 				B40008C41A647E3D00E48935 /* main.m in Sources */,
+				B4AAA3DF1A66190800D80310 /* BrowserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

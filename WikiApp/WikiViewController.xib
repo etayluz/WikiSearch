@@ -23,11 +23,14 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYU-Ci-gHn">
-                    <rect key="frame" x="208" y="110" width="84" height="16"/>
-                    <color key="backgroundColor" red="0.0" green="0.46581318430656932" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="442" y="50" width="54" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="CS6-NM-jf7"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <inset key="contentEdgeInsets" minX="6" minY="0.0" maxX="6" maxY="0.0"/>
-                    <state key="normal" title="Wiki Search">
+                    <state key="normal" title="-->">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -36,7 +39,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WzM-RB-qGc">
-                    <rect key="frame" x="0.0" y="146" width="499" height="249"/>
+                    <rect key="frame" x="0.0" y="80" width="499" height="341"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="r7F-qi-Zub"/>
@@ -48,16 +51,17 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="V8G-VK-DbP" secondAttribute="trailing" constant="60" id="DR4-Z1-At7"/>
                 <constraint firstItem="V8G-VK-DbP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="DhP-8C-hUW"/>
-                <constraint firstItem="RYU-Ci-gHn" firstAttribute="top" secondItem="V8G-VK-DbP" secondAttribute="bottom" constant="30" id="POz-5Q-gs6"/>
-                <constraint firstItem="RYU-Ci-gHn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QMu-UZ-J7G"/>
-                <constraint firstAttribute="bottom" secondItem="WzM-RB-qGc" secondAttribute="bottom" constant="26" id="TvY-us-0aJ"/>
-                <constraint firstItem="WzM-RB-qGc" firstAttribute="top" secondItem="RYU-Ci-gHn" secondAttribute="bottom" constant="20" id="oFq-Px-BBP"/>
-                <constraint firstAttribute="trailing" secondItem="WzM-RB-qGc" secondAttribute="trailing" id="sFg-AC-n8c"/>
+                <constraint firstItem="WzM-RB-qGc" firstAttribute="top" secondItem="V8G-VK-DbP" secondAttribute="bottom" id="E3k-ZU-Uzi"/>
+                <constraint firstItem="RYU-Ci-gHn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="FeI-Sd-Z8H"/>
+                <constraint firstItem="RYU-Ci-gHn" firstAttribute="leading" secondItem="V8G-VK-DbP" secondAttribute="trailing" constant="3" id="JFF-Et-Foj"/>
+                <constraint firstAttribute="trailing" secondItem="RYU-Ci-gHn" secondAttribute="trailing" constant="3" id="POj-mf-FDe"/>
+                <constraint firstItem="WzM-RB-qGc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eLc-E4-GSo"/>
+                <constraint firstAttribute="trailing" secondItem="WzM-RB-qGc" secondAttribute="trailing" id="nxG-wp-doo"/>
                 <constraint firstItem="V8G-VK-DbP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="tfb-RD-Kk8"/>
-                <constraint firstItem="WzM-RB-qGc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uK2-9r-b4g"/>
+                <constraint firstAttribute="bottom" secondItem="WzM-RB-qGc" secondAttribute="bottom" id="zRL-QX-0II"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="475.5" y="388.5"/>
+            <point key="canvasLocation" x="475.5" y="384.5"/>
         </view>
     </objects>
 </document>

@@ -8,7 +8,7 @@
 
 #import "WikiViewController.h"
 #import "WikiTableViewCell.h"
-
+#import "BrowserViewController.h"
 @interface WikiViewController ()
 
 @end
@@ -17,15 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.resultsTable = [[UITableView alloc] init];
-//    self.resultsTable.dataSource = self;
-//    self.resultsTable.delegate = self;
-
+    self.resultsTable.hidden = YES;
+    self.resultsTable.showsVerticalScrollIndicator = NO;
+    self.searchField.text = @"Arnold";
+    self.searchButton.layer.borderColor = [UIColor blackColor].CGColor;
+    self.searchButton.alpha = 0.5;
+    self.searchButton.layer.borderWidth = 0.5f;
+    self.searchButton.layer.cornerRadius = 3;
+    self.searchButton.clipsToBounds = YES;
 }
 
 -(IBAction)searchButtonPressed
 {
-  self.searchField.text = @"Arnold";
   if (self.searchField.text.length == 0)
   {
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Search Field Empty" message:@"Please enter search text" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -39,12 +42,31 @@
   [request setHTTPMethod:@"GET"];
   NSURLResponse *response = nil;
   NSData *receivedData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-  self.searchResults = [NSJSONSerialization JSONObjectWithData: receivedData options:kNilOptions error:&error];
+  if (receivedData == nil)
+  {
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"No results" message:[NSString stringWithFormat:@"No results found for entry: \"%@\"", self.searchField.text] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    return;
+  }
+  NSDictionary *results = [NSJSONSerialization JSONObjectWithData: receivedData options:kNilOptions error:&error];
+  NSDictionary *pageResults = results[@"query"][@"pages"];
+  if (pageResults == nil)
+  {
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"No results" message:[NSString stringWithFormat:@"No results found for entry: \"%@\"", self.searchField.text] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    return;
+  }
+  self.resultsTable.hidden = NO;
+
+  self.searchResults = [NSMutableArray new];
+  for(NSString *page in [pageResults allKeys] )
+  {
+    [self.searchResults addObject:pageResults[page]];
+  }
   [self.resultsTable reloadData];
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
   return 1;
 }
@@ -66,14 +88,19 @@
   if(cell == nil){
     cell = [[[NSBundle mainBundle] loadNibNamed:@"WikiTableViewCell" owner:self options:nil] objectAtIndex:0];
   }
-  cell.pageTitle.text = [@(indexPath.row) stringValue];
+  cell.selectionStyle = UITableViewCellSelectionStyleNone;
+  cell.pageTitle.text = self.searchResults[indexPath.row][@"title"];
   
   return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  ;
+  BrowserViewController *broswerViewController = [BrowserViewController new];
+  broswerViewController.url = self.searchResults[indexPath.row][@"fullurl"];
+  [self presentViewController:broswerViewController animated:YES completion:nil];
 }
+
+
 
 
 - (void)didReceiveMemoryWarning {

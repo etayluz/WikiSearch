@@ -28,6 +28,9 @@
                     <constraint firstItem="1A0-1a-hfm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="vnq-w6-qQI"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="pageTitle" destination="1A0-1a-hfm" id="4WI-Ny-F0T"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

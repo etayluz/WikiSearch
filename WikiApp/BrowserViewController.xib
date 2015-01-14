@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BrowserViewController">
+            <connections>
+                <outlet property="backButton" destination="Wsv-3i-4Yq" id="09Y-Si-1e8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="SNf-Uo-vBB" id="R75-gb-g9D"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="536" height="418"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header.png" translatesAutoresizingMaskIntoConstraints="NO" id="RY9-y4-Cpy">
+                    <rect key="frame" x="0.0" y="0.0" width="536" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="dDR-db-iP5"/>
+                    </constraints>
+                </imageView>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNf-Uo-vBB">
+                    <rect key="frame" x="0.0" y="70" width="536" height="348"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsv-3i-4Yq">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="ths-UW-Sg9"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tappedBackButton" destination="-1" eventType="touchUpInside" id="ymg-6h-Utd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wsv-3i-4Yq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1JE-ds-o0u"/>
+                <constraint firstAttribute="trailing" secondItem="RY9-y4-Cpy" secondAttribute="trailing" id="4mZ-L8-4cI"/>
+                <constraint firstItem="SNf-Uo-vBB" firstAttribute="top" secondItem="Wsv-3i-4Yq" secondAttribute="bottom" id="5EP-is-RjQ"/>
+                <constraint firstAttribute="bottom" secondItem="SNf-Uo-vBB" secondAttribute="bottom" id="8Rt-82-7Jq"/>
+                <constraint firstItem="RY9-y4-Cpy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fba-62-0pk"/>
+                <constraint firstItem="SNf-Uo-vBB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="afs-96-bso"/>
+                <constraint firstItem="SNf-Uo-vBB" firstAttribute="top" secondItem="RY9-y4-Cpy" secondAttribute="bottom" id="bIy-Ha-0cL"/>
+                <constraint firstItem="RY9-y4-Cpy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eJE-r4-nXQ"/>
+                <constraint firstAttribute="trailing" secondItem="SNf-Uo-vBB" secondAttribute="trailing" id="kna-pQ-cJO"/>
+                <constraint firstItem="Wsv-3i-4Yq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qkg-I6-ZE6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="108" y="63"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Header.png" width="1080" height="216"/>
+    </resources>
+</document>
