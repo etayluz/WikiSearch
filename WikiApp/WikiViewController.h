@@ -13,5 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UITableView *resultsTable;
 @property (strong, nonatomic) NSMutableArray *searchResults;
-
+-(IBAction)searchButtonPressed;
 @end

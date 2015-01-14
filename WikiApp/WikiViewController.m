@@ -19,12 +19,15 @@
     [super viewDidLoad];
     self.resultsTable.hidden = YES;
     self.resultsTable.showsVerticalScrollIndicator = NO;
-    self.searchField.text = @"Arnold";
     self.searchButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.searchButton.alpha = 0.5;
     self.searchButton.layer.borderWidth = 0.5f;
     self.searchButton.layer.cornerRadius = 3;
     self.searchButton.clipsToBounds = YES;
+    self.searchField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.searchField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    self.searchField.delegate = (id)self;
+//    self.searchField.text = @"Test";
 }
 
 -(IBAction)searchButtonPressed
@@ -100,6 +103,12 @@
   [self presentViewController:broswerViewController animated:YES completion:nil];
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField*)textField;
+{
+  [self.view endEditing:YES];
+  [self searchButtonPressed];
+  return NO;
+}
 
 
 
